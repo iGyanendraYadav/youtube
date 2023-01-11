@@ -22,13 +22,13 @@ const Comments = ({videoId, totalComments}) => {
       dispatch(addComment(videoId,text))
       setText('');
   };
-
+  const { photoURL } = useSelector(state => state.auth?.user)
   return (
     <div className="comments">
       <p>{totalComments} Comments</p>
       <div className="comments__form d-flex w-100 my-2">
         <img
-          src="https://www.freeiconspng.com/thumbs/login-icon/user-login-icon-14.png"
+          src={photoURL} alt="avatar"
           className="rounded-circle mr-3"
         />
         <form onSubmit={handleComment} className="d-flex flex-grow-1">

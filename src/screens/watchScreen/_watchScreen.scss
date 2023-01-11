@@ -1,3 +1,4 @@
+@import '../../base';
 
 .watchScreen__player{
     height: 60vh;
@@ -5,3 +6,10 @@
     width: 100%;
     margin-bottom: 2rem;
 }
+
+@media (max-width: $breakpoint-small){
+    .watchScreen__player{
+        height: 35vh;
+    }
+}
+
